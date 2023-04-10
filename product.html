@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản phẩm</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/product.css">
+    <style>
+        /* width */
+        ::-webkit-scrollbar {
+          width: 5px;
+        }
+        
+        /* Track */
+        ::-webkit-scrollbar-track {
+          box-shadow: inset 0 0 5px #0ac2d271; 
+          border-radius: 10px;
+        }
+         
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+          background: #098995e0; 
+          border-radius: 10px;
+        }
+        
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+          background: #05daee; 
+        }
+        </style>
+</head>
+<body>
+    <div class="warreper">
+        <div class="header">
+            <div class="header_top">
+                <div class="container center">
+                    <div class="header_left">
+                        <span>@Nội thất KS | Sang trọng - Hiện đại</span>
+                    </div>
+                    <div class="header_right">
+                        <a href="login.html" class="a">
+                            <div class="login">
+                                <div class="item">Đăng nhập</div>
+                            </div>
+                        </a>
+                        <a href="rigister.html" class="a">
+                            <div class="login">
+                                <div class="item">Đăng kí</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="header_content">
+                <div class="container center">
+                    <div class="logo">
+                        <img src="images/logo.png" >
+                    </div>
+                    <div class="search">
+                        <div class="search_menu">
+                            <select id="select-search" >
+                                <option value="0">All</option>
+                                <option value="1">Tủ</option>
+                                <option value="2">Bàn</option>
+                                <option value="3">Ghế</option>
+                                <option value="4">Giường</option>
+                                <option value="5">Sofa</option>
+                            </select>
+                        </div>
+                        <div class="search_input">
+                            <input type="text" id="" placeholder="Tìm kiếm tại đây..." outline="none">
+                        </div>
+                        <div class="search_icon">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                    </div>
+                    <div class="action">
+                        <div class="action_left">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="action_right">
+                            <div class="action_right_above">
+                                Gọi điện tư vấn <br> 0326.011.497
+                            </div>
+                        </div>
+                        <div class="action_outermost">
+                            <span class="action_outermost_so">4</span>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div id="menu">
+                <div class="container center">
+                    <section onclick="functionactiveMenu()" class="header_menu">
+                        <div class="header_menu_nav">
+                            <i class="fas fa-bars header__nav-menu-icon "></i>
+                            <div  class="header_menu_product">Danh mục sản phẩm</div>
+                            <div class="box-list-container1 ">
+                                <ul class="list_container1">
+                                    <li class="item-container"><i class="fab fa-blogger-b"></i> Tủ quần áo</li>
+                                    <li class="item-container">
+                                        <i class="fas fa-bezier-curve"
+                                                style="font-size: larger ; width: 40px;"></i>Tủ TV
+                                    </li>
+                                    <li class="item-container">
+                                        <i class="fas fa-archive"
+                                                style="font-size: larger ; width: 40px;"></i> Tủ Giày
+                                    </li>
+                                    <li class="item-container">
+                                        <i class="fas fa-couch"
+                                                style="font-size: larger ; width: 40px;"></i>Sofa
+                                    </li>
+                                    <li class="item-container">
+                                        <i class="fas fa-border-all"
+                                                style="font-size: larger ; width: 40px;"></i>Bộ Bàn Ăn
+                                    </li>
+                                    <li class="item-container">
+                                        <i class="fas fa-inbox"
+                                                style="font-size: larger ; width: 40px;"></i>Bàn Làm Việc
+                                    </li>
+                                    <li class="item-container">
+                                        <i class="fab fa-bitbucket"
+                                                style="font-size: larger ; width: 40px;"></i>Bàn trang điểm
+                                    </li>
+                                    <li class="item-container">
+                                        <i class="fas fa-swatchbook"
+                                                style="font-size: larger ; width: 40px;"></i>Kệ sách
+                                    </li>
+                                    <li class="item-container">
+                                        <i class="fas fa-chair"
+                                                style="font-size: larger ; width: 40px;"></i>Ghế
+                                    </li>
+                                    <li class="item-container">
+                                        <i class="fas fa-bed"
+                                                style="font-size: larger ; width: 40px;"></i>Giường
+                                    </li>
+                                </ul>
+                            </div>
+                            <script>
+                                const menudropbar = document.getElementsByClassName('header_menu')[0]
+                                const listmenu = document.getElementsByClassName('box-list-container1')[0]
+                       
+                            function functionactiveMenu() {
+                                    listmenu.classList.toggle('activemenu');
+                                // console.log(listmenu)
+                            }
+                            
+                            </script>
+                        </div>
+                        <div class="header_list_menu1 activemenu">
+                            <ul class="header_nav_list">
+                                <li class="header_nav_item">
+                                    <a href="index.html" class="header_nav_link">Trang chủ</a>
+                                </li>
+                                <li class="header_nav_item">
+                                    <a href="product.html" class="header_nav_link">Sản phẩm</a>
+                                </li>
+                                <li class="header_nav_item">
+                                    <a href="post.html" class="header_nav_link">Bài viết</a>
+                                </li>
+                                <li class="header_nav_item">
+                                    <a href="cart.html" class="header_nav_link">Giỏ hàng</a>
+                                </li>
+                                <li class="header_nav_item">
+                                    <a href="lienhe.html" class="header_nav_link">Liên hệ</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+                
+            </div>
+        </div>
+        <div class="container grid">
+            <div class="product_itemtitle grid">
+                <div class="bestselling__heading">
+                    <canvas id="myCanvas" width="220" height="70">
+                        Your browser does not support the HTML canvas tag.</canvas>
+    
+                    <script>
+                        var c = document.getElementById("myCanvas");
+                        var ctx = c.getContext("2d");
+    
+                        var grd = ctx.createLinearGradient(0, 0, 200, 0);
+                        grd.addColorStop(0, "blue");
+                        grd.addColorStop(1, "red");
+    
+                        ctx.fillStyle = grd;
+                        ctx.font = "20px Arial";
+                        ctx.fillText("Siêu ưu đãi giảm 50%", 10, 40);
+                    
+                    </script>
+                
+            </div>
+            <section class="grid bestselling_content">
+                <div class="bestselling_typeproduct grid">
+                    <div class="bestselling_product row sm-gutter">
+                        <div class="col l-4 m-6 c-12">
+                            <div class="product_details">
+                                <img src="images/1.jpg" class="product_details_img">
+                                <div>
+                                    <div class="product_details_title">
+                                        <a > Bộ bàn ghế cho gia đình </a>
+                                    </div>
+                                    <div class="bestselling__product_rate">
+                                        <i class="fas fa-star bestselling__product-rate"></i>
+                                        <i class="fas fa-star bestselling__product-rate"></i>
+                                        <i class="fas fa-star bestselling__product-rate"></i>
+                                        <i class="fas fa-star bestselling__product-rate"></i>
+                                        <i class="fas fa-star bestselling__product-rate"></i>
+                                    </div>
+                                    <span class="bestselling__product_price">1.200.000đ</span>
+                                    <a href="produc_details.html">
+                                        <div class="bestselling__product_btn_warp">
+                                            <button class="bestselling__product_btn">Xem hàng</button>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-4 m-6 c-12">
+                            <div class="product_details">
+                                <img src="images/product1.jpg" class="product_details_img">
+                                <div>
+                                    <div class="product_details_title">
+                                        <a > Bộ bàn ghế cho gia đình </a>
+                                    </div>
+                                    <div class="bestselling__product_rate">
+                                        <i class="fas fa-star bestselling__product-rate"></i>
+                                        <i class="fas fa-star bestselling__product-rate"></i>
+                                        <i class="fas fa-star bestselling__product-rate"></i>
+                                        <i class="fas fa-star bestselling__product-rate"></i>
+                                        <i class="fas fa-star bestselling__product-rate"></i>
+                                    </div>
+                                    <span class="bestselling__product_price">1.700.000đ</span>
+                                    <a href="produc_details.html">
+                                        <div class="bestselling__product_btn_warp">
+                                            <button class="bestselling__product_btn">Xem hàng</button>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-4 m-6 c-12">
+                            <div class="product_details">
+                                <img src="images/3.jpg" class="product_details_img">
+                                <div>
+                                    <div class="product_details_title">
+                                        <a > Bộ bàn ghế cho gia đình </a>
+                                    </div>
+                                    <div class="bestselling__product_rate">
+                                        <i class="fas fa-star bestselling__product-rate"></i>
+                                        <i class="fas fa-star bestselling__product-rate"></i>
+                                        <i class="fas fa-star bestselling__product-rate"></i>
+                                        <i class="fas fa-star bestselling__product-rate"></i>
+                                        <i class="fas fa-star bestselling__product-rate"></i>
+                                    </div>
+                                    <span class="bestselling__product_price">1.800.000đ</span>
+                                    <a href="produc_details.html">
+                                        <div class="bestselling__product_btn_warp">
+                                            <button class="bestselling__product_btn">Xem hàng</button>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-4 m-6 c-12">
+                            <div class="product_details">
+                                <img src="images/4.jpg" class="product_details_img">
+                                <div>
+                                    <div class="product_details_title">
+                                        <a > Bộ bàn ghế cho gia đình </a>
+                                    </div>
+                                    <div class="bestselling__product_rate">
+                                        <i class="fas fa-star bestselling__product-rate"></i>
+                                        <i class="fas fa-star bestselling__product-rate"></i>
+                                        <i class="fas fa-star bestselling__product-rate"></i>
+                                        <i class="fas fa-star bestselling__product-rate"></i>
+                                        <i class="fas fa-star bestselling__product-rate"></i>
+                                    </div>
+                                    <span class="bestselling__product_price">1.650.000đ</span>
+                                    <a href="produc_details.html">
+                                        <div class="bestselling__product_btn_warp">
+                                            <button class="bestselling__product_btn">Xem hàng</button>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-4 m-6 c-12">
+                            <div class="product_details">
+                                <img src="images/5.jpg" class="product_details_img">
+                                <div>
+                                    <div class="product_details_title">
+                                        <a > Bộ bàn ghế cho gia đình </a>
+                                    </div>
+                                    <div class="bestselling__product_rate">
+                                        <i class="fas fa-star bestselling__product-rate"></i>
+                                        <i class="fas fa-star bestselling__product-rate"></i>
+                                        <i class="fas fa-star bestselling__product-rate"></i>
+                                        <i class="fas fa-star bestselling__product-rate"></i>
+                                        <i class="fas fa-star bestselling__product-rate"></i>
+                                    </div>
+                                    <span class="bestselling__product_price">2.100.000đ</span>
+                                    <a href="produc_details.html">
+                                        <div class="bestselling__product_btn_warp">
+                                            <button class="bestselling__product_btn">Xem hàng</button>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-4 m-6 c-12">
+                            <div class="product_details">
+                                <img src="images/6.jpg" class="product_details_img">
+                                <div>
+                                    <div class="product_details_title">
+                                        <a > Bộ bàn ghế cho gia đình </a>
+                                    </div>
+                                    <div class="bestselling__product_rate">
+                                        <i class="fas fa-star bestselling__product-rate"></i>
+                                        <i class="fas fa-star bestselling__product-rate"></i>
+                                        <i class="fas fa-star bestselling__product-rate"></i>
+                                        <i class="fas fa-star bestselling__product-rate"></i>
+                                        <i class="fas fa-star bestselling__product-rate"></i>
+                                    </div>
+                                    <span class="bestselling__product_price">2.200.000đ</span>
+                                    <a href="produc_details.html">
+                                        <div class="bestselling__product_btn_warp">
+                                            <button class="bestselling__product_btn">Xem hàng</button>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-4 m-6 c-12">
+                            <div class="product_details">
+                                <img src="images/7.jpg" class="product_details_img">
+                                <div>
+                                    <div class="product_details_title">
+                                        <a > Bộ bàn ghế cho gia đình </a>
+                                    </div>
+                                    <div class="bestselling__product_rate">
+                                        <i class="fas fa-star bestselling__product-rate"></i>
+                                        <i class="fas fa-star bestselling__product-rate"></i>
+                                        <i class="fas fa-star bestselling__product-rate"></i>
+                                        <i class="fas fa-star bestselling__product-rate"></i>
+                                        <i class="fas fa-star bestselling__product-rate"></i>
+                                    </div>
+                                    <span class="bestselling__product_price">2.500.000đ</span>
+                                    <a href="produc_details.html">
+                                        <div class="bestselling__product_btn_warp">
+                                            <button class="bestselling__product_btn">Xem hàng</button>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-4 m-6 c-12">
+                            <div class="product_details">
+                                <img src="images/8.jpg" class="product_details_img">
+                                <div>
+                                    <div class="product_details_title">
+                                        <a > Bộ bàn ghế cho gia đình </a>
+                                    </div>
+                                    <div class="bestselling__product_rate">
+                                        <i class="fas fa-star bestselling__product-rate"></i>
+                                        <i class="fas fa-star bestselling__product-rate"></i>
+                                        <i class="fas fa-star bestselling__product-rate"></i>
+                                        <i class="fas fa-star bestselling__product-rate"></i>
+                                        <i class="fas fa-star bestselling__product-rate"></i>
+                                    </div>
+                                    <span class="bestselling__product_price">2.050.000đ</span>
+                                    <a href="produc_details.html">
+                                        <div class="bestselling__product_btn_warp">
+                                            <button class="bestselling__product_btn">Xem hàng</button>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-4 m-6 c-12">
+                            <div class="product_details">
+                                <img src="images/9.jpg" class="product_details_img">
+                                <div>
+                                    <div class="product_details_title">
+                                        <a > Bộ bàn ghế cho gia đình </a>
+                                    </div>
+                                    <div class="bestselling__product_rate">
+                                        <i class="fas fa-star bestselling__product-rate"></i>
+                                        <i class="fas fa-star bestselling__product-rate"></i>
+                                        <i class="fas fa-star bestselling__product-rate"></i>
+                                        <i class="fas fa-star bestselling__product-rate"></i>
+                                        <i class="fas fa-star bestselling__product-rate"></i>
+                                    </div>
+                                    <span class="bestselling__product_price">1.950.000đ</span>
+                                    <a href="produc_details.html">
+                                        <div class="bestselling__product_btn_warp">
+                                            <button class="bestselling__product_btn">Xem hàng</button>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- <div class="bestselling_typeproduct">
+                <div class="bestselling_product">
+                    <div class="product_details">
+                        <img src="images/product1.jpg" class="product_details_img">
+                        <div>
+                            <div class="product_details_title">
+                                <a > Bộ bàn ăn 4 ghế cho gia đình nhỏ</a>
+                            </div>
+                            <div class="bestselling__product_rate">
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                            </div>
+                            <span class="bestselling__product_price">1.200.000đ</span>
+                            <a href="product.html">
+                                <div class="bestselling__product_btn_warp">
+                                    <button class="bestselling__product_btn">Xem hàng</button>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product_details">
+                        <img src="images/product2.jpg" class="product_details_img">
+                        <div>
+                            <div class="product_details_title">
+                                <a > Bộ bàn ăn gỗ Đài Loan trắng mới</a>
+                            </div>
+                            <div class="bestselling__product_rate">
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                            </div>
+                            <span class="bestselling__product_price">2.500.000đ</span>
+                            <a href="product.html">
+                                <div class="bestselling__product_btn_warp">
+                                    <button class="bestselling__product_btn">Xem hàng</button>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product_details">
+                        <img src="images/product10.jpg" class="product_details_img">
+                        <div>
+                            <div class="product_details_title">
+                                <a > Bộ ghế sofa đen vải min cao cấp</a>
+                            </div>
+                            <div class="bestselling__product_rate">
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                            </div>
+                            <span class="bestselling__product_price">3.300.000đ</span>
+                            <a href="product.html">
+                                <div class="bestselling__product_btn_warp">
+                                    <button class="bestselling__product_btn">Xem hàng</button>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bestselling_product">
+                    <div class="product_details">
+                        <img src="images/product6.jpg" class="product_details_img">
+                        <div>
+                            <div class="product_details_title">
+                                <a > Giường 2 tầng cho bé có cầu thang</a>
+                            </div>
+                            <div class="bestselling__product_rate">
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                            </div>
+                            <span class="bestselling__product_price">5.100.000đ</span>
+                            <a href="product.html">
+                                <div class="bestselling__product_btn_warp">
+                                    <button class="bestselling__product_btn">Xem hàng</button>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product_details">
+                        <img src="images/product12.jpg" class="product_details_img">
+                        <div>
+                            <div class="product_details_title">
+                                <a > Tủ giày 4 ngăn chất liệu nhựa Đài Loan</a>
+                            </div>
+                            <div class="bestselling__product_rate">
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                            </div>
+                            <span class="bestselling__product_price">1.000.000đ</span>
+                            <a href="product.html">
+                                <div class="bestselling__product_btn_warp">
+                                    <button class="bestselling__product_btn">Xem hàng</button>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product_details">
+                        <img src="images/product18.jpg" class="product_details_img" >
+                        <div>
+                            <div class="product_details_title">
+                                <a > Tủ quần áo màu trắng sang trọng</a>
+                            </div>
+                            <div class="bestselling__product_rate">
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                            </div>
+                            <span class="bestselling__product_price">7.800.000đ</span>
+                            <a href="product.html">
+                                <div class="bestselling__product_btn_warp">
+                                    <button class="bestselling__product_btn">Xem hàng</button>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div> 
+            </div> -->
+                <div class="product_item grid">
+    
+                    <div class="produc_title">
+                        <div class="title">
+                            Sản phẩm tương tự
+                        </div>
+                    </div>
+                    <div class="product_aside_item">
+                        <div class="product_details_item">
+                            <div class="product_details_item_img">
+                                <img src="images/1.jpg" class="product_img_2">
+                            </div>
+                            
+                            <div class="product_details_title_m">
+                                <a > Bộ bàn ghế cho gia đình nhỏ</a>
+                            </div>
+                            <div class="bestselling__product_rate">
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                            </div>
+                            <div>
+                                <span class="bestselling__product_price_m">1.200.000đ</span>
+                            </div>    
+                        </div>
+                        <div class="product_details_item">
+                            <div class="product_details_item_img">
+                                <img src="images/2.jpg" class="product_img_2">
+                            </div>
+                            
+                            <div class="product_details_title_m">
+                                <a > Bộ bàn ghế cho gia đình nhỏ</a>
+                            </div>
+                            <div class="bestselling__product_rate">
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                            </div>
+                            <div>
+                                <span class="bestselling__product_price_m">1.200.000đ</span>
+                            </div>    
+                        </div>
+                        <div class="product_details_item">
+                            <div class="product_details_item_img">
+                                <img src="images/3.jpg" class="product_img_2">
+                            </div>
+                            
+                            <div class="product_details_title_m">
+                                <a > Bộ bàn ghế cho gia đình nhỏ</a>
+                            </div>
+                            <div class="bestselling__product_rate">
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                            </div>
+                            <div>
+                                <span class="bestselling__product_price_m">1.200.000đ</span>
+                            </div>    
+                        </div>
+                        <div class="product_details_item">
+                            <div class="product_details_item_img">
+                                <img src="images/4.jpg" class="product_img_2">
+                            </div>
+                            
+                            <div class="product_details_title_m">
+                                <a > Bộ bàn ghế cho gia đình nhỏ</a>
+                            </div>
+                            <div class="bestselling__product_rate">
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                            </div>
+                            <div>
+                                <span class="bestselling__product_price_m">1.200.000đ</span>
+                            </div>    
+                        </div>
+                        <div class="product_details_item">
+                            <div class="product_details_item_img">
+                                <img src="images/5.jpg" class="product_img_2">
+                            </div>
+                            
+                            <div class="product_details_title_m">
+                                <a > Bộ bàn ghế cho gia đình nhỏ</a>
+                            </div>
+                            <div class="bestselling__product_rate">
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                            </div>
+                            <div>
+                                <span class="bestselling__product_price_m">1.200.000đ</span>
+                            </div>    
+                        </div>
+                        <div class="product_details_item">
+                            <div class="product_details_item_img">
+                                <img src="images/8.jpg" class="product_img_2">
+                            </div>
+                            
+                            <div class="product_details_title_m">
+                                <a > Bộ bàn ghế cho gia đình nhỏ</a>
+                            </div>
+                            <div class="bestselling__product_rate">
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                            </div>
+                            <div>
+                                <span class="bestselling__product_price_m">1.200.000đ</span>
+                            </div>    
+                        </div>
+                        <div class="product_details_item">
+                            <div class="product_details_item_img">
+                                <img src="images/9.jpg" class="product_img_2">
+                            </div>
+                            
+                            <div class="product_details_title_m">
+                                <a > Bộ bàn ghế cho gia đình nhỏ</a>
+                            </div>
+                            <div class="bestselling__product_rate">
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                                <i class="fas fa-star bestselling__product-rate"></i>
+                            </div>
+                            <div>
+                                <span class="bestselling__product_price_m">1.200.000đ</span>
+                            </div>    
+                        </div>
+                        <br>
+                    </div>   
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <section class="footer__top">
+            <div class="footer_total row sm-gutter">
+                <div class="footer_left col l-4 m-4 c-12">
+                    <h4 class="footer_left_top">
+                        Về chúng tôi
+                    </h4>
+                    <div class="footer_left_bottom">
+                        Nội thất KS là hệ thống chuyên cung cấp những
+                        phụ kiện, thiết bị cần thiết cho gia đình các
+                        bạn trên khắp cả nước.Chúng tôi sẽ liên tục cập
+                        nhật những sản phẩm mới nhất, chất lượng nhất,
+                        hợp thời nhất giúp các bạn có những trải nghiệm
+                        tuyệt vời! <br> <br>
+                        Điện thoại: 0166.5488.703 <br>
+                        Email: noithatks0427@gmail.com <br>
+                        Zalo: 0166 5488 703 <br>
+                    </div>
+                </div>
+                <div class="footer_top_policy col l-4 m-4 c-12">
+                    <h4 class="footer_left_top">
+                        Chính sách mua hàng
+                    </h4>
+                    <ul class="footer_top_policy_list">
+                        <li class="footer_top_policy_item">
+                            <a href="#" class="footer_top_policy_link">Hình thức đặt hàng</a>
+                        </li>
+                        <li class="footer_top_policy_item">
+                            <a href="#" class="footer_top_policy_link">Hình thức thanh toán</a>
+                        </li>
+                        <li class="footer_top_policy_item">
+                            <a href="#" class="footer_top_policy_link">Phương thức vận chuyển</a>
+                        </li>
+                        <li class="footer_top_policy_item">
+                            <a href="#" class="footer_top_policy_link">Chính sách đổi trả</a>
+                        </li>
+                        <li class="footer_top_policy_item">
+                            <a href="#" class="footer_top_policy_link">Hướng dẫ sử dụng</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer_top_contact_wrap col l-4 m-4 c-12">
+                    
+                        <h4 class="footer_top_contact_heading">
+                            Hotline liên hệ
+                        </h4>
+
+                    <div class="footer_top_contact">
+                        <div class="footer_top_contact_icon">
+                            <img src="images/phone_top.png" class="footer_top_contact_img">
+                        </div>
+
+                        <div class="footer_top_contact_phone_wrap">
+                            <div class="footer_top_contact_phone">
+                                 0166.5488.703
+                            </div>
+                            <div class="footer_top_contact_des">
+                                (Tư vấn miễn phí 24/24)
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4 class="footer_top_contact_heading">
+                        Kết nối với chúng tôi
+                    </h4>
+
+                    <div class="footer_top_contact_social">
+                        <a href="#" class="footer_top_contact_social_link">
+                            <img src="images/facebook.png">
+                        </a>
+                        <a href="#" class="footer_top_contact_social_link">
+                            <img src="images/youtube.png">
+                        </a>
+                        <a href="#" class="footer_top_contact_social_link">
+                            <img src="images/tiktok.png">
+                        </a>
+                        <a href="#" class="footer_top_contact_social_link">
+                            <img src="images/zalo.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="footer_bottom">
+            <div class="content">
+                <div class="footer_bottom_content">
+                    <span class="footer_bottom_content">@Nội thất KS | Sang trọng - Hiện đại</span>
+                </div>
+            </div>
+        </section>
+    </footer>
+
+</body>
+</html>
